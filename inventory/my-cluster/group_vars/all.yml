@@ -5,7 +5,7 @@ ansible_user: debian
 systemd_dir: /etc/systemd/system
 
 # Set your timezone
-system_timezone: "Your/Timezone"
+system_timezone: "America/Los_Angeles"
 
 # interface which will be used for flannel
 flannel_iface: "eth0"
@@ -18,7 +18,7 @@ apiserver_endpoint: "10.10.0.10"
 k3s_token: "some-SUPER-DEDEUPER-secret-password"
 
 # change these to your liking, the only required one is--no-deploy servicelb
-extra_server_args: "--disable servicelb --disable traefik --disable local-storage"
+extra_server_args: "--disable servicelb --disable traefik --disable local-storage --etcd-s3 --etcd-s3-bucket=etcd-snapshot --etcd-s3-endpoint=minio.ericxliu.me:443 --etcd-s3-access-key=BHKZ6DPIFiIdQdUw616BwoQK78jNJdlkSYfncJRPtYPXpyeutJNC8fhyRGykgHTD --etcd-s3-secret-key=xJmDcrNbDJB0vFpliuz3bbe5bpvXhfIIzFf31mg6VnCYQUf697eyHtmM2B8KPBGq"
 extra_agent_args: ""
 
 # image tag for kube-vip
