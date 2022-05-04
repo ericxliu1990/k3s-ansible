@@ -8,6 +8,9 @@
     group: root
     mode: 0755
 
+- name: Ensures /etc/rancher/k3s/ dir exists
+  file: path=/etc/rancher/k3s state=directory
+
 - name: Copy registry file
   template:
     src: "registries.yaml.j2"
