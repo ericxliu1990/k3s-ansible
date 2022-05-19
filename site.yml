@@ -5,10 +5,13 @@
   become: yes
   vars:
     install_root_cert_pem: files/rootCA.pem
+    inotify_max_user_watches: 524288
+    inotify_max_user_instances: 8192
   roles:
     - role: prereq
     - role: download
     - role: gametize.install-root-cert
+    - role: gantsign.inotify
 
 - hosts: master
   become: yes
