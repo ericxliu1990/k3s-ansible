@@ -67,6 +67,11 @@
     name: open-iscsi
     state: present
 
+- name: install lsscsi on the servers
+  package:
+    name: lsscsi
+    state: present
+
 - name: install htop on the servers
   package:
     name: htop
